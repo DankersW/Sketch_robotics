@@ -1,3 +1,3 @@
-#define HALL_F_M1 2 // Digital Interrupt pin 2 --> INT0
-#define ENABLE_PIN 5
-#define DIRECTION_PIN 4
+#define MOTOR_LEFT_HALL_F		 	2 	// Hall sensor left wheel forward | Digital interrupt (INT0)
+#define MOTOR_LEFT_ENABLE			5	// Enable pin motor 1
+#define MOTOR_LEFT_DIRECTION		4	// Direction pin motor 1

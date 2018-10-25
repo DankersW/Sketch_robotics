@@ -15,7 +15,7 @@ enum WHEEL {LEFT, RIGHT, BOTH};
 extern unsigned long leftWheelCounter;
 extern unsigned long rightWheelCounter;
 
-void initInterrupts(uint8_t pin);
+void initInterrupts(char pin);
 void leftWheelTickInterruptRoutine();
 void rightWheelTickInterruptRoutine();
 void setWheelCounterValues(WHEEL wheel);

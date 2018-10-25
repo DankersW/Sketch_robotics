@@ -10,7 +10,7 @@
 unsigned long leftWheelCounter = 0;
 unsigned long rightWheelCounter = 0;
 
-void initInterrupts(uint8_t channel)
+void initInterrupts(char channel)
 {
 	pinMode(channel, INPUT_PULLUP);
 	if(channel == 2)
