@@ -3,8 +3,10 @@
 #include "src/Macros.h"
 #include "src/InterruptHandlers.h"
 #include "src/MotorController.h"
+#include "src/Steering.h"
 
 MotorController motorController;
+Steering steering;
 
 int8_t speedVals[2] = {0, 0};
 
