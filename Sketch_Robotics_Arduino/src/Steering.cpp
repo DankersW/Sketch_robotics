@@ -1,18 +1,29 @@
 /*
  * Steering.cpp
  *
- *  Created on: 2 nov. 2018
- *      Author: a293795
+ *  Created on: 12 nov. 2018
+ *      Author: Wouter
  */
 
 #include "Steering.h"
 
-Steering::Steering() {
-	// TODO Auto-generated constructor stub
+Steering::Steering()
+{
+	leftServo.attach(STEERING_LEFT);
+	rightServo.attach(STEERING_RIGHT);
+
+	uint8_t servoPos[2] = {STRAIGHT_WHEEL_LEFT, STRAIGHT_WHEEL_RIGHT};
+	MoveWheel(servoPos);
+}
+
+Steering::~Steering()
+{
 
 }
 
-Steering::~Steering() {
-	// TODO Auto-generated destructor stub
+void Steering::MoveWheel(uint8_t servoPosition[2] )
+{
+	leftServo.write(servoPosition[0]);
+	rightServo.write(servoPosition[1]);
 }
 

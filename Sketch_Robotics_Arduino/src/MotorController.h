@@ -17,9 +17,9 @@ class MotorController {
 public:
 	MotorController();
 	virtual ~MotorController();
-	void setSpeed(int8_t speeds[2]);
+	void setSpeed(int16_t speeds[NUMBER_OF_MOTORS]);
 private:
-	void setDirection(bool directions[2]);
+	void setDirection(bool directions[NUMBER_OF_MOTORS]);
 };
 
 #endif /* SRC_MOTORCONTROLLER_H_ */
