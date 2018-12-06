@@ -1,6 +1,6 @@
 import smbus
 import time
-# for RPI version 1, use “bus = smbus.SMBus(0)”
+
 bus = smbus.SMBus(1)
 
 # This is the address we setup in the Arduino Program
@@ -17,7 +17,7 @@ def readNumber():
     return number
 
 while True:
-    var = input("Enter 1 – 9: ")
+    var = input("Enter a number: ")
     if not var:
         continue
 
