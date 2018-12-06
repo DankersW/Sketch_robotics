@@ -1,0 +1,28 @@
+$ cat /etc/modprobe.d/raspi-blacklist.conf
+# blacklist spi and i2c by default (many users don't need them)
+blacklist spi-bcm2708
+#blacklist i2c-bcm2708
+
+
+
+i2c-dev
+
+
+$ sudo apt-get install i2c-tools
+
+
+$ sudo adduser pi i2c
+
+
+reboot
+
+pi@raspberrypi ~ $ ll /dev/i2c*
+crw-rw---T 1 root i2c 89, 0 May 25 11:56 /dev/i2c-0
+crw-rw---T 1 root i2c 89, 1 May 25 11:56 /dev/i2c-1
+
+pi@raspberrypi ~ $ i2cdetect -y 1
+
+
+sudo apt-get install python-smbus
+
+
